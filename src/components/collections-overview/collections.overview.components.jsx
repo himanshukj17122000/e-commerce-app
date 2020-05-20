@@ -1,9 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import "./collections.styles.scss";
-import { GetAllShopItems } from "../../redux/shop/shop.selector";
-import PreviewCollection from "../preview-collection/preview-collection.components";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import './collections.styles.scss';
+import { GetAllForPreview } from '../../redux/shop/shop.selector';
+import PreviewCollection from '../preview-collection/preview-collection.components';
 const CollectionsOverview = ({ collections }) => {
   return (
     <div className='collections-overview'>
@@ -14,6 +14,6 @@ const CollectionsOverview = ({ collections }) => {
   );
 };
 const mapsToProps = createStructuredSelector({
-  collections: GetAllShopItems,
+  collections: GetAllForPreview,
 });
 export default connect(mapsToProps)(CollectionsOverview);
