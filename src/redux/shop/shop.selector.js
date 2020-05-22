@@ -22,3 +22,8 @@ export const selectFetching = createSelector(
     [GetDirectory],
     shop => shop.isFetching
 )
+
+export const selectCollectionsLoading = createSelector(
+    [GetDirectory],
+    shop => !!shop.collections
+)
